@@ -81,4 +81,546 @@
       font-size: 15px;
       outline: none;
       min-width: 190px;
+    }
+
+    .lang-select option {
+      color: #111;
+    }
+
+    .hero {
+      padding: 70px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(36px, 6vw, 66px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      margin: 0 0 26px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #111;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid var(--border);
+    }
+
+    .phone-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .phone {
+      width: 100%;
+      aspect-ratio: 10 / 16;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.25), transparent 30%),
+        linear-gradient(180deg, #0b62ef, #041f53);
+      border: 1px solid rgba(255,255,255,0.18);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+    }
+
+    .scanner-box {
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+      border: 2px dashed rgba(255,255,255,0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .toy-car {
+      font-size: clamp(72px, 9vw, 110px);
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
+    }
+
+    .scan-line {
+      position: absolute;
+      left: 6%;
+      right: 6%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #7dfcff, transparent);
+      box-shadow: 0 0 16px #7dfcff;
+      animation: scan 2.8s linear infinite;
+    }
+
+    @keyframes scan {
+      0% { top: 10%; }
+      50% { top: 84%; }
+      100% { top: 10%; }
+    }
+
+    section {
+      padding: 26px 0;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      margin: 0 0 14px;
+    }
+
+    .section-subtitle {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 850px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 12px 0 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .emoji {
+      font-size: 34px;
+    }
+
+    .how-it-works {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .step {
+      position: relative;
+      padding-top: 48px;
+    }
+
+    .step-number {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #111;
+      font-weight: 900;
+    }
+
+    .cta {
+      margin: 34px 0 56px;
+      background: linear-gradient(135deg, rgba(255,213,74,0.18), rgba(255,107,0,0.16));
+      border: 1px solid rgba(255,213,74,0.26);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+    }
+
+    .cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 18px;
+      max-width: 800px;
+    }
+
+    footer {
+      padding: 26px 0 50px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .grid-3,
+      .how-it-works {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">🏎️</div>
+        <span>Hot Wheels Scanner</span>
+      </div>
+
+      <select id="languageSwitcher" class="lang-select" aria-label="Language selector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1 data-i18n="hero_title">Escanea tu coche y descubre su valor real</h1>
+          <p data-i18n="hero_text">Hot Wheels Scanner te ayuda a identificar coches coleccionables, consultar precios estimados y tomar mejores decisiones al comprar, vender o coleccionar.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#features" data-i18n="hero_btn_1">Ver funciones</a>
+            <a class="btn btn-secondary" href="#how" data-i18n="hero_btn_2">Cómo funciona</a>
+          </div>
+        </div>
+
+        <div class="phone-card">
+          <div class="phone">
+            <div class="scan-line"></div>
+            <div class="scanner-box">
+              <div class="toy-car">🚗</div>
+              <strong data-i18n="screen_title">Escanear coche</strong>
+              <span data-i18n="screen_text">Haz una foto y obtén precio y descripción</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2 class="section-title" data-i18n="features_title">Todo lo que necesitas para comprar y vender mejor</h2>
+        <p class="section-subtitle" data-i18n="features_text">Diseñada para coleccionistas, revendedores y amantes del die-cast. Una herramienta rápida, visual y útil para valorar coches coleccionables.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="emoji">📸</div>
+            <h3 data-i18n="feature_1_title">Escaneo rápido</h3>
+            <p data-i18n="feature_1_text">Haz una foto del coche y obtén un resultado claro en pocos segundos.</p>
+          </div>
+
+          <div class="card">
+            <div class="emoji">💰</div>
+            <h3 data-i18n="feature_2_title">Precio estimado</h3>
+            <p data-i18n="feature_2_text">Consulta una referencia útil de valor para saber si estás comprando bien o vendiendo barato.</p>
+          </div>
+
+          <div class="card">
+            <div class="emoji">📝</div>
+            <h3 data-i18n="feature_3_title">Descripción del artículo</h3>
+            <p data-i18n="feature_3_text">La app muestra una descripción sencilla para ayudarte a identificar mejor el modelo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <h2 class="section-title" data-i18n="how_title">Cómo funciona</h2>
+        <p class="section-subtitle" data-i18n="how_text">La experiencia está pensada para ser simple, rápida y útil desde el primer momento.</p>
+
+        <div class="how-it-works">
+          <div class="card step">
+            <div class="step-number">1</div>
+            <h3 data-i18n="step_1_title">Abre la cámara</h3>
+            <p data-i18n="step_1_text">Enfoca el coche desde la app y toma una foto con buena luz.</p>
+          </div>
+
+          <div class="card step">
+            <div class="step-number">2</div>
+            <h3 data-i18n="step_2_title">La app analiza la imagen</h3>
+            <p data-i18n="step_2_text">El sistema procesa la foto y busca coincidencias para calcular una referencia útil.</p>
+          </div>
+
+          <div class="card step">
+            <div class="step-number">3</div>
+            <h3 data-i18n="step_3_title">Recibe el resultado</h3>
+            <p data-i18n="step_3_text">Obtén precio estimado y descripción en una sola pantalla.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container cta">
+        <h2 data-i18n="cta_title">Una herramienta útil en el mundo del coleccionismo</h2>
+        <p data-i18n="cta_text">Cuando compras y vendes artículos de colección, tomar decisiones rápidas y bien informadas marca la diferencia. Hot Wheels Scanner está pensada para ayudarte a ahorrar tiempo, evitar errores y detectar oportunidades.</p>
+        <a class="btn btn-primary" href="#top" data-i18n="cta_btn">Empezar ahora</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span data-i18n="footer_text">Hot Wheels Scanner · Página oficial de presentación</span>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      es: {
+        hero_title: "Escanea tu coche y descubre su valor real",
+        hero_text: "Hot Wheels Scanner te ayuda a identificar coches coleccionables, consultar precios estimados y tomar mejores decisiones al comprar, vender o coleccionar.",
+        hero_btn_1: "Ver funciones",
+        hero_btn_2: "Cómo funciona",
+        screen_title: "Escanear coche",
+        screen_text: "Haz una foto y obtén precio y descripción",
+        features_title: "Todo lo que necesitas para comprar y vender mejor",
+        features_text: "Diseñada para coleccionistas, revendedores y amantes del die-cast. Una herramienta rápida, visual y útil para valorar coches coleccionables.",
+        feature_1_title: "Escaneo rápido",
+        feature_1_text: "Haz una foto del coche y obtén un resultado claro en pocos segundos.",
+        feature_2_title: "Precio estimado",
+        feature_2_text: "Consulta una referencia útil de valor para saber si estás comprando bien o vendiendo barato.",
+        feature_3_title: "Descripción del artículo",
+        feature_3_text: "La app muestra una descripción sencilla para ayudarte a identificar mejor el modelo.",
+        how_title: "Cómo funciona",
+        how_text: "La experiencia está pensada para ser simple, rápida y útil desde el primer momento.",
+        step_1_title: "Abre la cámara",
+        step_1_text: "Enfoca el coche desde la app y toma una foto con buena luz.",
+        step_2_title: "La app analiza la imagen",
+        step_2_text: "El sistema procesa la foto y busca coincidencias para calcular una referencia útil.",
+        step_3_title: "Recibe el resultado",
+        step_3_text: "Obtén precio estimado y descripción en una sola pantalla.",
+        cta_title: "Una herramienta útil en el mundo del coleccionismo",
+        cta_text: "Cuando compras y vendes artículos de colección, tomar decisiones rápidas y bien informadas marca la diferencia. Hot Wheels Scanner está pensada para ayudarte a ahorrar tiempo, evitar errores y detectar oportunidades.",
+        cta_btn: "Empezar ahora",
+        footer_text: "Hot Wheels Scanner · Página oficial de presentación"
+      },
+      en: {
+        hero_title: "Scan your car and discover its real value",
+        hero_text: "Hot Wheels Scanner helps you identify collectible cars, check estimated prices, and make better decisions when buying, selling, or collecting.",
+        hero_btn_1: "See features",
+        hero_btn_2: "How it works",
+        screen_title: "Scan car",
+        screen_text: "Take a photo and get price and description",
+        features_title: "Everything you need to buy and sell better",
+        features_text: "Designed for collectors, resellers, and die-cast enthusiasts. A fast, visual, and useful tool for valuing collectible cars.",
+        feature_1_title: "Fast scanning",
+        feature_1_text: "Take a photo of the car and get a clear result in seconds.",
+        feature_2_title: "Estimated price",
+        feature_2_text: "Check a useful value reference to know whether you are buying well or selling too cheaply.",
+        feature_3_title: "Item description",
+        feature_3_text: "The app shows a simple description to help you identify the model better.",
+        how_title: "How it works",
+        how_text: "The experience is designed to be simple, fast, and useful from the first moment.",
+        step_1_title: "Open the camera",
+        step_1_text: "Point at the car inside the app and take a photo with good lighting.",
+        step_2_title: "The app analyzes the image",
+        step_2_text: "The system processes the photo and looks for matches to calculate a useful reference.",
+        step_3_title: "Get the result",
+        step_3_text: "Receive estimated price and description on a single screen.",
+        cta_title: "A useful tool in the world of collecting",
+        cta_text: "When you buy and sell collectible items, making quick and well-informed decisions makes a real difference. Hot Wheels Scanner is built to help you save time, avoid mistakes, and spot opportunities.",
+        cta_btn: "Start now",
+        footer_text: "Hot Wheels Scanner · Official presentation page"
+      },
+      fr: {
+        hero_title: "Scannez votre voiture et découvrez sa vraie valeur",
+        hero_text: "Hot Wheels Scanner vous aide à identifier les voitures de collection, consulter des prix estimés et prendre de meilleures décisions lors de l'achat, de la vente ou de la collection.",
+        hero_btn_1: "Voir les fonctions",
+        hero_btn_2: "Comment ça marche",
+        screen_title: "Scanner la voiture",
+        screen_text: "Prenez une photo et obtenez le prix et la description",
+        features_title: "Tout ce dont vous avez besoin pour mieux acheter et vendre",
+        features_text: "Conçue pour les collectionneurs, les revendeurs et les passionnés de die-cast. Un outil rapide, visuel et utile pour estimer les voitures de collection.",
+        feature_1_title: "Scan rapide",
+        feature_1_text: "Prenez une photo de la voiture et obtenez un résultat clair en quelques secondes.",
+        feature_2_title: "Prix estimé",
+        feature_2_text: "Consultez une référence utile pour savoir si vous achetez bien ou si vous vendez trop bas.",
+        feature_3_title: "Description de l'article",
+        feature_3_text: "L'application affiche une description simple pour vous aider à mieux identifier le modèle.",
+        how_title: "Comment ça marche",
+        how_text: "L'expérience est conçue pour être simple, rapide et utile dès le premier instant.",
+        step_1_title: "Ouvrez la caméra",
+        step_1_text: "Cadrez la voiture dans l'application et prenez une photo avec une bonne lumière.",
+        step_2_title: "L'application analyse l'image",
+        step_2_text: "Le système traite la photo et recherche des correspondances pour calculer une référence utile.",
+        step_3_title: "Recevez le résultat",
+        step_3_text: "Obtenez le prix estimé et la description sur un seul écran.",
+        cta_title: "Un outil utile dans le monde de la collection",
+        cta_text: "Quand vous achetez et vendez des objets de collection, prendre des décisions rapides et bien informées fait toute la différence. Hot Wheels Scanner est conçue pour vous aider à gagner du temps, éviter les erreurs et repérer les opportunités.",
+        cta_btn: "Commencer",
+        footer_text: "Hot Wheels Scanner · Page officielle de présentation"
+      },
+      it: {
+        hero_title: "Scansiona la tua auto e scopri il suo vero valore",
+        hero_text: "Hot Wheels Scanner ti aiuta a identificare auto da collezione, controllare prezzi stimati e prendere decisioni migliori quando acquisti, vendi o collezioni.",
+        hero_btn_1: "Vedi funzioni",
+        hero_btn_2: "Come funziona",
+        screen_title: "Scansiona auto",
+        screen_text: "Scatta una foto e ottieni prezzo e descrizione",
+        features_title: "Tutto ciò di cui hai bisogno per comprare e vendere meglio",
+        features_text: "Pensata per collezionisti, rivenditori e appassionati di die-cast. Uno strumento veloce, visivo e utile per valutare auto da collezione.",
+        feature_1_title: "Scansione rapida",
+        feature_1_text: "Scatta una foto dell'auto e ottieni un risultato chiaro in pochi secondi.",
+        feature_2_title: "Prezzo stimato",
+        feature_2_text: "Consulta un riferimento utile di valore per sapere se stai comprando bene o vendendo troppo a poco.",
+        feature_3_title: "Descrizione articolo",
+        feature_3_text: "L'app mostra una descrizione semplice per aiutarti a identificare meglio il modello.",
+        how_title: "Come funziona",
+        how_text: "L'esperienza è pensata per essere semplice, veloce e utile fin dal primo momento.",
+        step_1_title: "Apri la fotocamera",
+        step_1_text: "Inquadra l'auto nell'app e scatta una foto con buona luce.",
+        step_2_title: "L'app analizza l'immagine",
+        step_2_text: "Il sistema elabora la foto e cerca corrispondenze per calcolare un riferimento utile.",
+        step_3_title: "Ricevi il risultato",
+        step_3_text: "Ottieni prezzo stimato e descrizione in un'unica schermata.",
+        cta_title: "Uno strumento utile nel mondo del collezionismo",
+        cta_text: "Quando acquisti e vendi articoli da collezione, prendere decisioni rapide e ben informate fa la differenza. Hot Wheels Scanner è pensata per aiutarti a risparmiare tempo, evitare errori e trovare opportunità.",
+        cta_btn: "Inizia ora",
+        footer_text: "Hot Wheels Scanner · Pagina ufficiale di presentazione"
+      },
+      pt: {
+        hero_title: "Digitalize seu carro e descubra seu valor real",
+        hero_text: "O Hot Wheels Scanner ajuda você a identificar carros colecionáveis, consultar preços estimados e tomar melhores decisões ao comprar, vender ou colecionar.",
+        hero_btn_1: "Ver recursos",
+        hero_btn_2: "Como funciona",
+        screen_title: "Escanear carro",
+        screen_text: "Tire uma foto e obtenha preço e descrição",
+        features_title: "Tudo o que você precisa para comprar e vender melhor",
+        features_text: "Feito para colecionadores, revendedores e fãs de die-cast. Uma ferramenta rápida, visual e útil para avaliar carros colecionáveis.",
+        feature_1_title: "Escaneamento rápido",
+        feature_1_text: "Tire uma foto do carro e obtenha um resultado claro em poucos segundos.",
+        feature_2_title: "Preço estimado",
+        feature_2_text: "Consulte uma referência útil de valor para saber se está comprando bem ou vendendo barato.",
+        feature_3_title: "Descrição do item",
+        feature_3_text: "O app mostra uma descrição simples para ajudar você a identificar melhor o modelo.",
+        how_title: "Como funciona",
+        how_text: "A experiência foi pensada para ser simples, rápida e útil desde o primeiro momento.",
+        step_1_title: "Abra a câmera",
+        step_1_text: "Aponte para o carro no app e tire uma foto com boa iluminação.",
+        step_2_title: "O app analisa a imagem",
+        step_2_text: "O sistema processa a foto e busca correspondências para calcular uma referência útil.",
+        step_3_title: "Receba o resultado",
+        step_3_text: "Obtenha preço estimado e descrição em uma única tela.",
+        cta_title: "Uma ferramenta útil no mundo do colecionismo",
+        cta_text: "Quando você compra e vende itens colecionáveis, tomar decisões rápidas e bem informadas faz diferença. O Hot Wheels Scanner foi criado para ajudar você a economizar tempo, evitar erros e encontrar oportunidades.",
+        cta_btn: "Começar agora",
+        footer_text: "Hot Wheels Scanner · Página oficial de apresentação"
+      },
+      ru: {
+        hero_title: "Сканируйте машинку и узнайте её реальную стоимость",
+        hero_text: "Hot Wheels Scanner помогает определять коллекционные машинки, смотреть примерные цены и принимать более выгодные решения при покупке, продаже и коллекционировании.",
+        hero_btn_1: "Смотреть функции",
+        hero_btn_2: "Как это работает",
+        screen_title: "Сканировать машинку",
+        screen_text: "Сделайте фото и получите цену и описание",
+        features_title: "Всё, что нужно для более выгодной покупки и продажи",
+        features_text: "Создано для коллекционеров, перепродавцов и любителей die-cast. Быстрый, наглядный и полезный инструмент для оценки коллекционных машинок.",
+        feature_1_title: "Быстрое сканирование",
+        feature_1_text: "Сделайте фото машинки и получите понятный результат за несколько секунд.",
+        feature_2_title: "Оценка цены",
+        feature_2_text: "Смотрите полезную ценовую ориентировку, чтобы понимать, выгодно ли вы покупаете или не продаёте ли слишком дёшево.",
+        feature_3_title: "Описание товара",
+        feature_3_text: "Приложение показывает простое описание, чтобы помочь лучше определить модель.",
+        how_title: "Как это работает",
+        how_text: "Всё сделано так, чтобы пользоваться было просто, быстро и удобно с первого момента.",
+        step_1_title: "Откройте камеру",
+        step_1_text: "Наведите камеру в приложении на машинку и сделайте фото при хорошем освещении.",
+        step_2_title: "Приложение анализирует изображение",
+        step_2_text: "Система обрабатывает фото и ищет совпадения, чтобы дать полезную ориентировку.",
+        step_3_title: "Получите результат",
+        step_3_text: "Получите примерную цену и описание на одном экране.",
+        cta_title: "Полезный инструмент в мире коллекционирования",
+        cta_text: "Когда вы покупаете и продаёте коллекционные вещи, быстрые и точные решения действительно важны. Hot Wheels Scanner создан, чтобы экономить ваше время, уменьшать ошибки и помогать замечать возможности.",
+        cta_btn: "Начать сейчас",
+        footer_text: "Hot Wheels Scanner · Официальная презентационная страница"
+      }
+    };
+
+    const switcher = document.getElementById('languageSwitcher');
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.es;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+      localStorage.setItem('hws_lang', lang);
+    }
+
+    const savedLang = localStorage.getItem('hws_lang') || 'es';
+    switcher.value = savedLang;
+    setLanguage(savedLang);
+
+    switcher.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+  </script>
+</body>
 </html>
